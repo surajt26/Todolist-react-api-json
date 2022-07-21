@@ -3,7 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import AddNewItem from './AddNewItem';
 import ItemList from './ItemList';
-
+import UpdateInput from './UpdateInput';
 
 const Todolist = () => {
 
@@ -52,7 +52,13 @@ const Todolist = () => {
                     />
                 </div>
             </div>
-
+            {/* Update Input Component */}
+            <UpdateInput
+                taskList={taskList}
+                selectedTask={selectedTask}
+                setSelectedTask={setSelectedTask}
+                getList={getList}
+            />
         </div>
     </>)
 }

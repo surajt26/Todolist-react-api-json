@@ -1,14 +1,13 @@
 {
-    "taskList": [
-        {
-            "tasks": [
-                "Kiwis",
-                "Dates",
-                "Coconuts",
-                "Bananas",
-                "Apples"
-            ],
-            "id": 1
-        }
-    ]
+  "taskList": [
+    {
+      "tasks": [
+        "Dates",
+        "Coconuts",
+        "Bananas",
+        "Apples"
+      ],
+      "id": 1
+    }
+  ]
 }
