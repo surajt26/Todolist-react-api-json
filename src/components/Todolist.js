@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import Header from './Header';
+// import AddNewItem from './AddNewItem';
+// import ItemList from './ItemList';
+// import UpdateInput from './UpdateInput';
 
 const Todolist = () => {
 
@@ -16,7 +19,11 @@ const Todolist = () => {
         // eslint-disable-next-line
     }, [])
 
-
+    // Selected task to store task and their id
+    // const [selectedTask, setSelectedTask] = useState({
+    //     task: '',
+    //     taskId: null
+    // });
 
     return (<>
         <div className='container position-relative'>
@@ -29,10 +36,28 @@ const Todolist = () => {
             >
                 <div className='col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4
                     mx-auto my-auto border rounded shadow'>
-
+                    {/* Header Component */}
+                    <Header />
+                    {/* Add New Item Component */}
+                    {/* <AddNewItem
+                        taskList={taskList}
+                        getList={getList}
+                    /> */}
+                    {/* Item List Component */}
+                    {/* <ItemList
+                        taskList={taskList}
+                        setSelectedTask={setSelectedTask}
+                        getList={getList}
+                    /> */}
                 </div>
             </div>
-
+            {/* Update Input Component */}
+            {/* <UpdateInput
+                taskList={taskList}
+                selectedTask={selectedTask}
+                setSelectedTask={setSelectedTask}
+                getList={getList}
+            /> */}
         </div>
     </>)
 }
