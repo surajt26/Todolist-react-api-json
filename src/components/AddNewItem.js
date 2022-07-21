@@ -27,7 +27,7 @@ const AddNewItem = (props) => {
         if (trimUpdateTask !== '') {
             await axios.put(`http://localhost:3004/taskList/1`, {
                 "tasks": [trimUpdateTask, ...taskList]
-            }).then(resp=>console.log(resp)).catch(err=>console.log(err))
+            })
             setTask('');
         }
         getList();
@@ -39,7 +39,7 @@ const AddNewItem = (props) => {
         e.preventDefault();
         await axios.put(`http://localhost:3004/taskList/1`, {
             "tasks": []
-        }).then(resp=>console.log(resp)).catch(err=>console.log(err))
+        })
         getList();
     }
 
