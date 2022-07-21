@@ -19,27 +19,27 @@ const AddNewItem = (props) => {
     const [task, setTask] = useState('');
 
     // Add new task action handle
-    const handleForm = (e) => {
+    const handleForm = async (e) => {
         // Stop default event behaviour
         e.preventDefault();
         // Trim all white space from both side
         const trimUpdateTask = task.trim();
         if (trimUpdateTask !== '') {
-            axios.put(`http://localhost:3004/taskList/1`, {
+            await axios.put(`http://localhost:3004/taskList/1`, {
                 "tasks": [trimUpdateTask, ...taskList]
-            })
-            getList();
+            }).then(resp=>console.log(resp)).catch(err=>console.log(err))
             setTask('');
         }
+        getList();
     }
 
     // Remove all list action handle
-    const removeAllHandle = (e) => {
+    const removeAllHandle = async (e) => {
         // Stop default event behaviour
         e.preventDefault();
-        axios.put(`http://localhost:3004/taskList/1`, {
+        await axios.put(`http://localhost:3004/taskList/1`, {
             "tasks": []
-        })
+        }).then(resp=>console.log(resp)).catch(err=>console.log(err))
         getList();
     }
 
