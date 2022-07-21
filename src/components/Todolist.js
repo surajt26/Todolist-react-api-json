@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from './Header';
-// import AddNewItem from './AddNewItem';
-// import ItemList from './ItemList';
-// import UpdateInput from './UpdateInput';
+import AddNewItem from './AddNewItem';
 
 const Todolist = () => {
 
@@ -11,19 +9,16 @@ const Todolist = () => {
     const [taskList, setTaskList] = useState([]);
 
     // Function to setTaskList from localStorage
-    const getList = () => axios.get(`http://localhost:3004/taskList`)
-        .then(resp => setTaskList(resp.data));
+    const getList = () => axios.get(`http://localhost:3004/taskList/1`)
+        .then(resp => setTaskList(resp.data.tasks));
+    console.log(taskList);
 
     useEffect(() => {
         getList();
         // eslint-disable-next-line
     }, [])
 
-    // Selected task to store task and their id
-    // const [selectedTask, setSelectedTask] = useState({
-    //     task: '',
-    //     taskId: null
-    // });
+
 
     return (<>
         <div className='container position-relative'>
@@ -39,25 +34,14 @@ const Todolist = () => {
                     {/* Header Component */}
                     <Header />
                     {/* Add New Item Component */}
-                    {/* <AddNewItem
+                    <AddNewItem
                         taskList={taskList}
                         getList={getList}
-                    /> */}
-                    {/* Item List Component */}
-                    {/* <ItemList
-                        taskList={taskList}
-                        setSelectedTask={setSelectedTask}
-                        getList={getList}
-                    /> */}
+                    />
+
                 </div>
             </div>
-            {/* Update Input Component */}
-            {/* <UpdateInput
-                taskList={taskList}
-                selectedTask={selectedTask}
-                setSelectedTask={setSelectedTask}
-                getList={getList}
-            /> */}
+
         </div>
     </>)
 }
