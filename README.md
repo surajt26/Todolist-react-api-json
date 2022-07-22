@@ -50,6 +50,12 @@
     <li>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.</li>
     <li>It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.</li>
 </ul>
+<br>
+<h3><a href="">Material-UI</a></h3>
+<ul>
+    <li>MUI offers a comprehensive suite of UI tools to help you ship new features faster.</li>
+    <li>Start with Material UI, our fully-loaded component library, or bring your own design system to our production-ready components.</li>
+</ul>
 <br><br>
 
 <h2><u>About The Project</u></h2>
@@ -69,3 +75,19 @@
     <li>ItemList component render entire taskList with two buttons, they avilable with each task first is "edit/update" button it's action is popup UpdateInput component with selected task and second is "delete" button it's action is delete selected task from the taskList.</li>
     <li>UpdateInput component contain one input field in form to show selected task and take details to edit/update task. It contain two button also first is "Update" button it's action is update task and close UpdateInput component and second is "Cancel" button it's action is close UpdateInput component without any changes.</li>
 </ul>
+<br><br>
+
+<h3><u>Prerequisites</u></h3>
+<ul>
+    <li>npm - <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Download Link</a></li>
+</ul>
+<br><br>
+
+<h3><u>How to run project and install dependencies</u></h3>
+<ol>
+    <li>Download <a href="https://github.com/surajt26/Todolist-react-api-json.git">TODOLIST-REACT-API-JSON</a> app project.</li>
+    <li>Install all dependency which mention in "package.json" file.</li>
+    <li>Install JSON Server.</li>
+    <li>Open New CMD/TERMINAL and run JSON Server.</li>
+    <li>Start <a href="https://github.com/surajt26/Todolist-react-api-json.git">TODOLIST-REACT-API-JSON</a> Project.</li>
+</ol>
