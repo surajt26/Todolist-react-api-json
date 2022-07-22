@@ -27,7 +27,6 @@ const ItemList = (props) => {
         const updatedTaskList = taskList.filter((value) => {
             return value !== task
         });
-        // sessionStorage.setItem('taskList', JSON.stringify(updatedTaskList));
         await axios.put(`http://localhost:3004/taskList/1`, {
             "tasks": [...updatedTaskList]
         })

@@ -31,7 +31,6 @@ const UpdateInput = (props) => {
         if ((selectedTask !== null) && (trimUpdateText !== "")) {
             let tempTaskList = taskList;
             tempTaskList[selectedTask.taskId] = trimUpdateText;
-            // sessionStorage.setItem('taskList', JSON.stringify(tempTaskList));
             await axios.put(`http://localhost:3004/taskList/1`, {
                 "tasks": [...tempTaskList]
             })

@@ -10,12 +10,12 @@ const Todolist = () => {
     // Task list to store all task
     const [taskList, setTaskList] = useState([]);
 
-    // Function to setTaskList from localStorage
+    // Function to setTaskList from db.json by API
     const getList = () => axios.get(`http://localhost:3004/taskList/1`)
         .then(resp => setTaskList(resp.data.tasks));
-    console.log(taskList);
 
     useEffect(() => {
+        // Get taskList from db.json for first time
         getList();
         // eslint-disable-next-line
     }, [])
